@@ -73,8 +73,11 @@ function App() {
   const scrollPhotos = (direction) => {
     if (!photoScrollRef.current) return;
 
-    const firstCard = photoScrollRef.current.querySelector(".photo-card");
+    const firstCard =
+      photoScrollRef.current.querySelector(".photo-card");
+
     const gap = 16;
+
     const scrollAmount = firstCard
       ? firstCard.offsetWidth + gap
       : window.innerWidth <= 768
@@ -94,6 +97,14 @@ function App() {
           <div className="logo-area">
             <h1 className="main-title">창원탐정 대한조사기업</h1>
             <p>신뢰와 책임의 전문 조사 서비스</p>
+
+            {/* 모바일에서만 표시되는 전화번호 */}
+            <a
+              className="mobile-header-phone"
+              href="tel:01055576112"
+            >
+              010-5557-6112
+            </a>
           </div>
 
           <nav className="nav">
@@ -106,7 +117,9 @@ function App() {
 
       <section className="hero">
         <div className="container hero-content">
-          <span className="hero-badge">탐정사무소 · 상간녀 소송 · 조사기업</span>
+          <span className="hero-badge">
+            탐정사무소 · 상간녀 소송 · 조사기업
+          </span>
 
           <h2>
             신중하고 정확한 대응으로
@@ -115,17 +128,26 @@ function App() {
           </h2>
 
           <p className="hero-desc">
-            대한조사기업은 상간녀 소송, 가정문제, 사건 관련, 선거 관련, 기업 조사,
-            해외 출장 조사, 산재·의료 관련 업무까지 폭넓게 대응합니다.
-            확인이 필요한 순간, 언제든 상담 문의를 남겨주세요.
+            대한조사기업은 상간녀 소송, 가정문제, 사건 관련, 선거 관련,
+            기업 조사, 해외 출장 조사, 산재·의료 관련 업무까지 폭넓게
+            대응합니다. 확인이 필요한 순간, 언제든 상담 문의를 남겨주세요.
           </p>
 
           <div className="hero-buttons">
-            <a className="primary-btn" href="tel:01055576112">
-              전화상담 <span className="phone-number">010-5557-6112</span>
+            <a
+              className="primary-btn"
+              href="tel:01055576112"
+            >
+              전화상담{" "}
+              <span className="phone-number">
+                010-5557-6112
+              </span>
             </a>
 
-            <a className="secondary-btn" href="#contact">
+            <a
+              className="secondary-btn"
+              href="#contact"
+            >
               상담안내 보기
             </a>
           </div>
@@ -140,10 +162,12 @@ function App() {
 
           <div className="about-box">
             <p>
-              창원 탐정사무소 대한조사기업은 관련 전문 자격을 갖춘 조사 전문가를 중심으로
-              상담과 조사 업무를 진행합니다. <br />
-              민감한 사안에 대한 충분한 검토를 바탕으로 필요한 조사와 확인 절차를
-              체계적으로 안내하며, <br />
+              창원 탐정사무소 대한조사기업은 관련 전문 자격을 갖춘
+              조사 전문가를 중심으로 상담과 조사 업무를 진행합니다.
+              <br />
+              민감한 사안에 대한 충분한 검토를 바탕으로 필요한 조사와
+              확인 절차를 체계적으로 안내하며,
+              <br />
               의뢰인의 신뢰와 보안을 최우선으로 생각합니다.
             </p>
 
@@ -158,10 +182,19 @@ function App() {
               </button>
 
               <div className="photo-scroll-wrap">
-                <div className="photo-scroll" ref={photoScrollRef}>
+                <div
+                  className="photo-scroll"
+                  ref={photoScrollRef}
+                >
                   {galleryImages.map((image, index) => (
-                    <div className="photo-card" key={index}>
-                      <img src={image} alt={`회사사진 ${index + 1}`} />
+                    <div
+                      className="photo-card"
+                      key={index}
+                    >
+                      <img
+                        src={image}
+                        alt={`회사사진 ${index + 1}`}
+                      />
                     </div>
                   ))}
                 </div>
@@ -180,17 +213,26 @@ function App() {
         </div>
       </section>
 
-      <section id="services" className="section section-gray">
+      <section
+        id="services"
+        className="section section-gray"
+      >
         <div className="container">
           <div className="section-title">
             <h3>주요업무</h3>
-            <p>현장 안내 내용을 기준으로 정리한 전담 조사 서비스입니다.</p>
+            <p>
+              현장 안내 내용을 기준으로 정리한 전담 조사 서비스입니다.
+            </p>
           </div>
 
           <div className="service-grid">
             {services.map((service, index) => (
-              <div className="service-card" key={index}>
+              <div
+                className="service-card"
+                key={index}
+              >
                 <h4>{service.title}</h4>
+
                 <ul>
                   {service.items.map((item, idx) => (
                     <li key={idx}>{item}</li>
@@ -212,13 +254,17 @@ function App() {
           <div className="contact-box">
             <div className="contact-item">
               <span className="label">대표전화</span>
+
               <a href="tel:01055576112">
-                <span className="phone-number">010-5557-6112</span>
+                <span className="phone-number">
+                  010-5557-6112
+                </span>
               </a>
             </div>
 
             <div className="contact-item">
               <span className="label">주소</span>
+
               <p>
                 경남 창원시 성산구 동산로220번길 28-1 지하1층
                 <br />
@@ -228,15 +274,28 @@ function App() {
 
             <div className="contact-item">
               <span className="label">영업시간</span>
+
               <p>매일 10:00 - 22:00</p>
             </div>
           </div>
         </div>
       </section>
 
-      <a className="floating-call" href="tel:01055576112">
-        전화상담
+      {/* 기존 모바일 하단 전화상담 버튼 */}
+      <a
+        className="mobile-call-button"
+        href="tel:01055576112"
+      >
+        전화상담&nbsp;&nbsp;010-5557-6112
       </a>
+
+      <footer className="footer">
+        <div className="container">
+          <p>
+            © 탐정사무소 대한조사기업. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
