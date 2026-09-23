@@ -98,13 +98,7 @@ function App() {
             <h1 className="main-title">창원탐정 대한조사기업</h1>
             <p>신뢰와 책임의 전문 조사 서비스</p>
 
-            {/* 모바일에서만 표시되는 전화번호 */}
-            <a
-              className="mobile-header-phone"
-              href="tel:01055576112"
-            >
-              010-5557-6112
-            </a>
+        
           </div>
 
           <nav className="nav">
