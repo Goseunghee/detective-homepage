@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.창원탐정대한조사기업.kr/sitemap.xml
